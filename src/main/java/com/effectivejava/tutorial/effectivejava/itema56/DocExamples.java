@@ -7,6 +7,18 @@ import java.lang.annotation.ElementType;
 
 // Documentation comment examples (Pages 255-9)
 public class DocExamples<E> {
+	
+	// kmsakmklqwmd
+	
+	/**
+	 *
+	 * 
+	 * 
+	 * 
+	 * 
+	 */
+	
+
 	// Method comment (Page 255)
 	/**
 	 * Returns the element at the specified position in this list.
