@@ -4,6 +4,7 @@ import java.util.concurrent.*;
 
 //Properly synchronized cooperative thread termination
 public class StopThread2 {
+	
 	private static boolean stopRequested;
 
 	private static synchronized void requestStop() {
@@ -15,6 +16,7 @@ public class StopThread2 {
 	}
 
 	public static void main(String[] args) throws InterruptedException {
+		
 		Thread backgroundThread = new Thread(() -> {
 			int i = 0;
 			while (!stopRequested())
@@ -25,4 +27,5 @@ public class StopThread2 {
 		TimeUnit.SECONDS.sleep(1);
 		requestStop();
 	}
+	
 }

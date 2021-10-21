@@ -2,6 +2,7 @@ package com.effectivejava.tutorial.effectivejava.itema78;
 
 public class TestDrive {
 	
+	
 	public static void main(String[] args) {
 		
 		/*
@@ -11,7 +12,8 @@ public class TestDrive {
 		 * 	Sırasıyla stopThread1'den 4 e kadar anlat
 		 * 
 		 */
-		
+	
+
 	}
 
 }

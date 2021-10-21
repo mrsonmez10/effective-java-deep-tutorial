@@ -17,7 +17,9 @@ public class StopThread1 {
 		backgroundThread.start();
 
 		TimeUnit.SECONDS.sleep(1); // Change and try
-		stopRequested = true;
+		
+		stopRequested = true;	
+		
 	}
 	
 }

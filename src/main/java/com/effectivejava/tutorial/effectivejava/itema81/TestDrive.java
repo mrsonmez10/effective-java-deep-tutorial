@@ -1,8 +1,10 @@
 package com.effectivejava.tutorial.effectivejava.itema81;
 
+import java.util.concurrent.Semaphore;
+
 public class TestDrive {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		/*
 		 * Common concurrent collections : ConcurrentHashMap, BlockingQueue
@@ -25,6 +27,23 @@ public class TestDrive {
 		
 		
 		// Semaphore
+		/* Sem
+		 * Limiting concurrent access to disk (as performance degrades due to competing disk seeks)
+			Thread creation limiting
+			JDBC connection pooling / limiting
+			Network connection throttling
+			Throttling CPU or memory intensive tasks
+		 */
+		/* Countdown
+		 * Achieving Maximum Parallelism: Sometimes we want to start a number of threads at the same time to achieve maximum parallelism
+			Wait N threads to completes before start execution
+			Deadlock detection.
+		 */
+		
+		Semaphore sem = new Semaphore(1);
+		sem.acquire(); // Github örneğini göster
+		
+		
 		
 		
 	}
