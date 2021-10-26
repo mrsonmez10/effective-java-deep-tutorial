@@ -27,18 +27,20 @@ public class CountDownLatchExample {
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
+			// System.out.println("LatchCount: " + latch.getCount());
 			System.out.println("Thread " + String.valueOf(id) + " bitti ");
 			latch.countDown();
 			System.out.println("LatchCount: " + latch.getCount());
 
 		}
+		
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		ExecutorService executorService = Executors.newFixedThreadPool(2);
 		
-		for (int i = 0; i < 3; i++) 
+		for (int i = 0; i < 3; i++) // 0 1 2 
 		{
 			executorService.submit(new Processor(i, latch));
 		}

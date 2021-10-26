@@ -1,10 +1,22 @@
 package com.effectivejava.tutorial.effectivejava.itema81;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.Semaphore;
 
 public class TestDrive {
 	
 	public static void main(String[] args) throws InterruptedException {
+		
+		
+		// Wait and notify-notifyall
+		/*
+		 * Wait threadi kitler. notify veya notifyall gelene kadar.
+		 * 
+		 * -> It wakes up one single thread that called wait() on the same object. (ntfy)
+		 * -> It wakes up all the threads that called wait() on the same object. (ntfyall)
+		 */
+		
 		
 		/*
 		 * Common concurrent collections : ConcurrentHashMap, BlockingQueue
@@ -17,7 +29,7 @@ public class TestDrive {
 		 * ConcurrentHashMap, HashMap’in aksine birden fazla thread’in aynı anda map’e erişip en az birisinin 
 		 * update işlemi yaptığı senaryolarda ek bir sekronizasyon yapısı gerektirmeden kullanılabilen bir veri yapısıdır.
 		 *  Bu veri yapısının bütün metodları thread-safe’dir.
-		 */
+		 */ // java.util.ConcurrentModificationException!! 
 		
 		// BlockingQueue
 		
@@ -43,9 +55,7 @@ public class TestDrive {
 		Semaphore sem = new Semaphore(1);
 		sem.acquire(); // Github örneğini göster
 		
-		
-		
-		
 	}
+	
 
 }

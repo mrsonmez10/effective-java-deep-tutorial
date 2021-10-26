@@ -22,20 +22,27 @@ public class ScheduledThreadPoolExecutorExample {
             } catch (InterruptedException e) {
                 // ignore
             }
+            System.out.println(Thread.currentThread().getName() + "@@@" );
             System.out.printf("DataCollector %d finished.%n", id);
         }
+        
     }
  
     public static void main(String[] args) throws InterruptedException {
+    	
+
+    	// wait for activity here	
         int nThreads = 3;
         System.out.printf("Starting Scheduled Thread Pool of %d threads%n", nThreads);
         ScheduledExecutorService executor = Executors.newScheduledThreadPool(nThreads);
         for (int i = 1; i <= 8; ++i) {
             executor.scheduleWithFixedDelay(new DataCollector(), 100, 800, MILLISECONDS);
+            //executor.scheduleAtFixedRate(new DataCollector(), 100, 800, MILLISECONDS);
         }
- 
         SECONDS.sleep(3);
- 
         executor.shutdown();
+
     }
+    
 }
+
