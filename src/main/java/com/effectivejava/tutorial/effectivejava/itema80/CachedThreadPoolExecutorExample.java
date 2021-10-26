@@ -27,13 +27,16 @@ public class CachedThreadPoolExecutorExample {
                 } catch (InterruptedException e) {
                     // ignore
                 }
+                System.out.println(Thread.currentThread().getName() + "@@@@");
                 System.out.printf("counter %d, value: %d%n", id, i);
             }
             System.out.println("Finishing counter: " + id);
         }
+        
     }
 
 	public static void main(String[] args) {
+		
         System.out.println("Starting Cached Thread Pool");
         ExecutorService executor = Executors.newCachedThreadPool();
         for (int i = 1; i <= 4; ++i) {
@@ -41,4 +44,5 @@ public class CachedThreadPoolExecutorExample {
         }
         executor.shutdown();
     }
+	
 }

@@ -22,6 +22,7 @@ public class SingleThreadExecutorExample {
  
         @Override
         public void run() {
+        	
             System.out.println("Starting printer work: " + id);
             for (int i = 0; i <= 100; i += speed) {
                 try {
@@ -31,16 +32,21 @@ public class SingleThreadExecutorExample {
                 }
                 System.out.printf("worker %d, done %d%%%n", id, i);
             }
+            System.out.println(Thread.currentThread().getName() + "@@@" ); // Bura
             System.out.println("Done PrinterJob: " + id);
         }
+        
     }
 
 	public static void main(String[] args) {
+		
         System.out.println("Starting Single Thread Executor");
         ExecutorService executor = Executors.newSingleThreadExecutor();
         for (int i = 0; i < 5; ++i) {
             executor.execute(new PrinterJob());
         }
         executor.shutdown();
+        
     }
+	
 }

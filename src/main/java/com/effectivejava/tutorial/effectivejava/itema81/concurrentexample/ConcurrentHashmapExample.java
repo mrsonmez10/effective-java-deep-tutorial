@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ConcurrentHashmapExample {
-
+	
 	public static void main(String[] args) {
 
 		Map<String, String> cityTemperatureMap = new ConcurrentHashMap<String, String>();
@@ -22,11 +22,14 @@ public class ConcurrentHashmapExample {
 		}
 		
 		
+		System.out.println("----------------------------------------");
+		
 		for (String key : cityTemperatureMap.keySet()) {
 			System.out.println(key + ":" + cityTemperatureMap.get(key));
 		}
 		
-
+		System.out.println("----------------------------------------");
+		
 		Iterator<Map.Entry<String, String>> iterator = cityTemperatureMap.entrySet().iterator();
 		while (iterator.hasNext()) {
 			Map.Entry<String, String> entry = iterator.next();

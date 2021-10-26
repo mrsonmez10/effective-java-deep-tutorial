@@ -48,7 +48,7 @@ public class BlockingQueueExample {
 				try 
 				{
 					Thread.sleep(3000);
-					System.out.println(queue.take() + " sayısı kuyruktan çıkarıldı  dizi boyutu" + queue.size());
+					System.out.println(queue.take() + " sayısı kuyruktan çıkarıldı  dizi boyutu " + queue.size());
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
@@ -74,6 +74,7 @@ public class BlockingQueueExample {
 				consumer.consume();
 			}
 		});
+		
 		thProduce.start();
 		thConsume.start();
 
