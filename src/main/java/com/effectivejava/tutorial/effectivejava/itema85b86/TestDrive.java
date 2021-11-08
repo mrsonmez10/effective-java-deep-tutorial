@@ -21,7 +21,7 @@ public class TestDrive {
 //		user.setId(52);
 //		user.setName("BucketHead");
 		
-		String filePath = "D:\\FS\\Learning\\E book\\effective-java\\src\\main\\java\\com\\effectivejava\\tutorial\\effectivejava\\itema85\\user.txt";
+		String filePath = "D:\\FS\\Learning\\E book\\effective-java\\src\\main\\java\\com\\effectivejava\\tutorial\\effectivejava\\itema85b86\\user.txt";
 		
 //		FileOutputStream fileOutputStream = new FileOutputStream(filePath);
 //		ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
