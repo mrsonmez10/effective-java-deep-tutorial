@@ -8,42 +8,27 @@ public class TestDrive {
 	
 	public static void main(String[] args) {
 		
-		// 1
-		
-		// Crash at Runtime!
-		// Arraydeki hataları derleme anında fark edemiyoruz
-		Object[] objectArray = new Long[1];
-		objectArray[0] = "asd"; // ArrayStoreException -
-		
-		
-	
-		
-		// 2
-		List<Long> ol = new ArrayList<Long>(); // Uyumsuz türler
-		ol.add(1L);
-		
+
+//		Object[] objectArray = new Long[1];
+//		objectArray[0] = true; 
 
 		
-		
-		// 3
-		
-		/*
-		 *  Arrayler ve listeler birbirleriyle uyumlu değildirler.
-		 *  Dizilerlde run time da tip kontrolü yapılıyor
-		 *  Listede ise derleme esnasında bundan dolayı aşağıdaki tanımı yapamayız.
-		 */
-		
-		// List<String>[] stringLists = new List<String>[1]; 
-
+//		List<Object> ol = new ArrayList<Long>(); // Uyumsuz türler.
+//		ol.add(1L);
 		
 		
-		/*
-		 * Özet
+		/**
+		 * Dizilerde Object[] -> Long[] 'un süper sınıfıdır.
+		 * Ancak List<Object> -> List<String> arasında böyle bir bağlantı söz konusu olamaz. Generic bizi kurtarıyor!
 		 * 
-		 * Diziler -> Run timeda tür güvenliği var ama derleme esnasında yok
-		 * Generic -> tam tersi
+		 * Genericleri arraylere tercih etmek bizi kurtarır.
 		 */
-	
+		
+		
+		// arrayler -> run time da tür güvenliği ancak derlemede sağlamaz
+		// genericlerde bunun tam tersi geçerli.
+		// Listleri tercih etmeliyiz.
+		
 	}
 
 }
